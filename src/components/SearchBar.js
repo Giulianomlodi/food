@@ -3,7 +3,7 @@ import {View, Text, TextInput, Button, StyleSheet} from 'react-native';
 import {EvilIcons} from '@expo/vector-icons';
 
 
-const SearchBar = ({term, onTermChange}) => {
+const SearchBar = ({term, onTermChange, onTermSubmit}) => {
   return (
     <View style={styles.background}>
       <EvilIcons name="search" style={styles.icona}/>
@@ -14,7 +14,7 @@ const SearchBar = ({term, onTermChange}) => {
         placeholder="Cerca"
         value={term}
         onTermChange={ newTerm => onTermChange(newTerm)}
-        onEndEditing={()=> console.log('submitted')}
+        onEndEditing={()=> onTermSubmit()}
         />
     </View>
   );
