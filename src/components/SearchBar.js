@@ -13,7 +13,7 @@ const SearchBar = ({term, onTermChange, onTermSubmit}) => {
         style={styles.sezioneRicerca}
         placeholder="Cerca"
         value={term}
-        onTermChange={onTermChange}
+        onChangeText={onTermChange}
         onEndEditing={onTermSubmit}
         />
     </View>
